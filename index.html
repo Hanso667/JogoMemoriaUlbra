@@ -2,87 +2,110 @@
 <html lang="en"> 
 <head> 
     <link rel="stylesheet" href="src/css/reset.css"> 
-    <link rel="stylesheet" href="src/css/style.css"> 
+    <link rel="stylesheet" href="src/css/Decks.css"> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title> 
 </head> 
 <body> 
 
-    <main class="screenStart">
+    <main id="Start" style="display: flex;">
 
-        <div class="Screen" id="Start">
+        <div class="Screen">
 
-            <button class="Button" id="btnStart" onclick="">
-            </button>
-
-        </div>
-
-    </main>
-
-    <main class="screenSettings">
-
-        <div class="Screen" id="settings">
-
-            <button class="Button" id="btnEasy" onclick="">
-            </button>
-
-            <button class="Button" id="btnNormal" onclick="">
-            </button>
-
-            <button class="Button" id="btnHard" onclick="">
-            </button>
+            <button id="btnStart" onclick="start()">Start</button>
 
         </div>
 
     </main>
 
-    <main class="screenEasy">
+    <main id="Settings" style="display: none;">
 
-        <div class="Screen" id="EasyDeck">
+        <div class="Screen">
 
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
+            <button id="btnEasy" onclick="SetDiff('easy')">Easy</button>
 
-        </div>
+            <button id="btnNormal" onclick="SetDiff('normal')">Normal</button>
 
-    </main>
-
-    <main class="screenNormal">
-
-        <div class="Screen" id="NormalDeck">
-
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
+            <button id="btnHard" onclick="SetDiff('hard')">Hard</button>
 
         </div>
 
     </main>
 
-    <main class="screenHard">
+    <main id="EasyDeck" style="display: none;">
 
-        <div class="Screen" id="HardDeck">
+        <div class="Deck" >
 
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
-            <button class="card" onclick=""></button>
+            <p>00:00</p>
+
+            <div class="EasyCards">
+
+                <button class="Card" id="1" onclick=""></button>
+                <button class="Card" id="2" onclick=""></button>
+                <button class="Card" id="3" onclick=""></button>
+                <button class="Card" id="4" onclick=""></button>
+
+            </div>
+
+            <button onclick="goBack()">Go Back</button>
+
+        </div>
+
+    </main>
+
+    <main id="NormalDeck" style="display: none;">
+
+        <div class="Deck" >
+
+            <p>00:00</p>
+
+            <div class="NormalCards">
+
+                <button class="Card" id="5" onclick=""></button>
+                <button class="Card" id="6" onclick=""></button>
+                <button class="Card" id="7" onclick=""></button>
+                <button class="Card" id="8" onclick=""></button>
+                <button class="Card" id="9" onclick=""></button>
+                <button class="Card" id="10" onclick=""></button>
+
+            </div>
+
+            <button onclick="goBack()">Go Back</button>
+
+        </div>
+
+    </main>
+
+    <main id="HardDeck" style="display: none;">
+
+        <div class="Deck" >
+
+            <p>00:00</p>
+
+            <div class="HardCards">
+
+                <button class="Card" id="11" onclick=""></button>
+                <button class="Card" id="12" onclick=""></button>
+                <button class="Card" id="13" onclick=""></button>
+                <button class="Card" id="14" onclick=""></button>
+                <button class="Card" id="15" onclick=""></button>
+                <button class="Card" id="16" onclick=""></button>
+                <button class="Card" id="17" onclick=""></button>
+                <button class="Card" id="18" onclick=""></button>
+                <button class="Card" id="19" onclick=""></button>
+                <button class="Card" id="20" onclick=""></button>
+
+            </div>
+
+            <button onclick="goBack()">Go Back</button>
 
         </div>
 
     </main>
 
 </body> 
+<div class="Scripts">
+<script src="src/scripts/script.js"></script>
+</div>
 </html> 
