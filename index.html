@@ -25,11 +25,11 @@
 
         <div class="Screen">
 
-            <button id="btnEasy" onclick="SetDiff('easy')">Easy</button>
+            <button id="btnEasy" onclick="SetDiff('easy'), loadGameEasy()">Easy</button>
 
-            <button id="btnNormal" onclick="SetDiff('normal')">Normal</button>
+            <button id="btnNormal" onclick="SetDiff('normal'), loadGameNormal()">Normal</button>
 
-            <button id="btnHard" onclick="SetDiff('hard')">Hard</button>
+            <button id="btnHard" onclick="SetDiff('hard'), loadGameHard()">Hard</button>
 
         </div>
 
@@ -70,12 +70,6 @@
             <p>00:00</p>
 
                 <div class="EasyGrid">
-
-                        <div class="Card">
-                            <div class="face front"></div>
-                            <div class="face back"></div>
-                        </div>
-        
                 </div>
 
             <button onclick="goBack()">Go Back</button>
@@ -91,9 +85,6 @@
             <p>00:00</p>
 
                 <div class="NormalGrid">
-
-
-
                 </div>
 
             <button onclick="goBack()">Go Back</button>
@@ -109,9 +100,6 @@
             <p>00:00</p>
 
                 <div class="HardGrid">
-
-
-    
                 </div>
 
             <button onclick="goBack()">Go Back</button>

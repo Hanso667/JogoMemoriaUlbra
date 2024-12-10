@@ -64,6 +64,11 @@
     backface-visibility: hidden;
     
 }
-.Card:active{
+.reveal-card{
     transform: rotateY(185deg);
+}
+.disabled-card{
+    transition: 1s;
+    filter: saturate(0);
+    opacity: 0.5;
 }

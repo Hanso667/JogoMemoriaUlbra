@@ -1,4 +1,5 @@
 var LeaderBoard = [];
+var dificuldade = '';
 
 function setName(){
 
@@ -22,6 +23,8 @@ function start() {
 
 function SetDiff(diff) {
 
+    dificuldade = diff;
+
     document.getElementById("Settings").style.display = "none";
     document.getElementById("leaderBoard").style.display = "none";
 
@@ -35,6 +38,10 @@ function SetDiff(diff) {
 
 }
 function goBack(){
+    const cards = document.querySelectorAll('.Card');
+    cards.forEach((card)=>{
+        card.remove();
+    })
     document.getElementById("EasyDeck").style.display = "none";
     document.getElementById("NormalDeck").style.display = "none";
     document.getElementById("HardDeck").style.display = "none";
