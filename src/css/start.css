@@ -1,0 +1,58 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgb(31, 31, 31),black);
+}
+.Screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    height: 50vh;
+    width: 50vh;
+    background-image: radial-gradient(white,rgb(201, 201, 201));
+    box-shadow: 0 0 0 1vh rgb(201, 201, 201);
+    border: 1vh solid black;
+}
+.NameInput{
+    width: 40vh;
+}
+.LeaderBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-left: 40vh;
+    height: 50vh;
+    width: 40vh;
+    background-image: radial-gradient(white,rgb(201, 201, 201));
+    box-shadow: 0 0 0 1vh rgb(201, 201, 201);
+    border: 1vh solid black;
+}
+.LeaderBoard p{
+    margin-top: 0.25vh;
+    margin-bottom: 0.25vh;
+
+}
+.LeaderBoard th{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 35vh;
+    border: 1px solid black;
+}
+
+.Screen button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 40vh;
+}

@@ -2,7 +2,8 @@
 <html lang="en"> 
 <head> 
     <link rel="stylesheet" href="src/css/reset.css"> 
-    <link rel="stylesheet" href="src/css/Decks.css"> 
+    <link rel="stylesheet" href="src/css/start.css"> 
+    <link rel="stylesheet" href="src/css/Game.css"> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title> 
@@ -12,8 +13,9 @@
     <main id="Start" style="display: flex;">
 
         <div class="Screen">
-
-            <button id="btnStart" onclick="start()">Start</button>
+            <input class="NameInput" id="UserName" type="text"></input>
+            <button id="btnSetUser" onclick="setName()" style="display: flex;">Set Name</button>
+            <button id="btnStart" onclick="start()" style="display: none;">Start</button>
 
         </div>
 
@@ -33,20 +35,48 @@
 
     </main>
 
+    <div class="LeaderBoard" id="leaderBoard">
+
+        <p>LeaderBoard</p>
+
+        <table>
+
+            <tr id="First">
+
+                <th>abacate</th>
+
+            </tr>
+
+            <tr id="Second">
+
+                <th>abacate2</th>
+
+            </tr>
+
+            <tr id="Third">
+
+                <th>abacate3</th>
+
+            </tr>
+
+        </table>
+
+    </div>
+
     <main id="EasyDeck" style="display: none;">
 
-        <div class="Deck" >
+        <div class="EasyDeck" >
 
             <p>00:00</p>
 
-            <div class="EasyCards">
+                <div class="EasyGrid">
 
-                <button class="Card" id="1" onclick=""></button>
-                <button class="Card" id="2" onclick=""></button>
-                <button class="Card" id="3" onclick=""></button>
-                <button class="Card" id="4" onclick=""></button>
-
-            </div>
+                        <div class="Card">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                        </div>
+        
+                </div>
 
             <button onclick="goBack()">Go Back</button>
 
@@ -56,20 +86,15 @@
 
     <main id="NormalDeck" style="display: none;">
 
-        <div class="Deck" >
+        <div class="NormalDeck" >
 
             <p>00:00</p>
 
-            <div class="NormalCards">
+                <div class="NormalGrid">
 
-                <button class="Card" id="5" onclick=""></button>
-                <button class="Card" id="6" onclick=""></button>
-                <button class="Card" id="7" onclick=""></button>
-                <button class="Card" id="8" onclick=""></button>
-                <button class="Card" id="9" onclick=""></button>
-                <button class="Card" id="10" onclick=""></button>
 
-            </div>
+
+                </div>
 
             <button onclick="goBack()">Go Back</button>
 
@@ -79,24 +104,15 @@
 
     <main id="HardDeck" style="display: none;">
 
-        <div class="Deck" >
+        <div class="HardDeck" >
 
             <p>00:00</p>
 
-            <div class="HardCards">
+                <div class="HardGrid">
 
-                <button class="Card" id="11" onclick=""></button>
-                <button class="Card" id="12" onclick=""></button>
-                <button class="Card" id="13" onclick=""></button>
-                <button class="Card" id="14" onclick=""></button>
-                <button class="Card" id="15" onclick=""></button>
-                <button class="Card" id="16" onclick=""></button>
-                <button class="Card" id="17" onclick=""></button>
-                <button class="Card" id="18" onclick=""></button>
-                <button class="Card" id="19" onclick=""></button>
-                <button class="Card" id="20" onclick=""></button>
 
-            </div>
+    
+                </div>
 
             <button onclick="goBack()">Go Back</button>
 
@@ -107,5 +123,6 @@
 </body> 
 <div class="Scripts">
 <script src="src/scripts/script.js"></script>
+<script src="/src/scripts/game.js"></script>
 </div>
 </html> 
