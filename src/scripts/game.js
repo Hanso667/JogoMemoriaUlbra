@@ -2,6 +2,11 @@
 const hardGrid = document.querySelector('.HardGrid');
 const normalGrid = document.querySelector('.NormalGrid');
 const easyGrid = document.querySelector('.EasyGrid');
+const timer = document.querySelectorAll('.counter');
+var placar = {};
+
+var nome,
+    ponto;
 
 const elementsHard = [
     'air',
@@ -37,24 +42,21 @@ const checkEndGame = () => {
 
             setTimeout(() => {
 
-                alert("fim de jogo");
-
-                cards.forEach((card)=>{
+                cards.forEach((card) => {
                     card.remove();
                 })
-
+                ponto += 1;
                 loadGameHard();
 
             }, 500);
 
-            
+
         }
     } else if (dificuldade == 'normal') {
         if (disabledCards.length == 6) {
             setTimeout(() => {
-                alert("fim de jogo");
 
-                cards.forEach((card)=>{
+                cards.forEach((card) => {
                     card.remove();
                 })
 
@@ -65,9 +67,8 @@ const checkEndGame = () => {
     } else if (dificuldade == 'easy') {
         if (disabledCards.length == 4) {
             setTimeout(() => {
-                alert("fim de jogo");
 
-                cards.forEach((card)=>{
+                cards.forEach((card) => {
                     card.remove();
                 })
 
@@ -89,6 +90,8 @@ const checkCards = () => {
 
         firstCard = '';
         secondCard = '';
+
+
 
         checkEndGame();
 
@@ -165,7 +168,7 @@ const loadGameNormal = () => {
 
     const duplicateElements = [...elementsNormal, ...elementsNormal];
 
-    const shuffledElements = duplicateElements.sort()
+    const shuffledElements = duplicateElements.sort(() => Math.random() - 0.5)
 
     shuffledElements.forEach((element) => {
 
@@ -178,7 +181,7 @@ const loadGameEasy = () => {
 
     const duplicateElements = [...elementsEasy, ...elementsEasy];
 
-    const shuffledElements = duplicateElements.sort()
+    const shuffledElements = duplicateElements.sort(() => Math.random() - 0.5)
 
     shuffledElements.forEach((element) => {
 
@@ -187,3 +190,49 @@ const loadGameEasy = () => {
 
     });
 }
+
+const startTime = () => {
+    const cards = document.querySelectorAll('.Card');
+
+    this.loop = setInterval(() => {
+
+        var currenTime;
+
+        timer.forEach((timer)=>{
+
+            currenTime = +timer.innerHTML;
+            timer.innerHTML = currenTime + 1;
+
+        })
+
+            if (currenTime == 5) {
+                alert('fim de tempo')
+                cards.forEach((card)=> {
+                    card.remove();
+                })
+
+                timer.forEach((timer)=>{
+                    timer.innerHTML = 0;
+                })
+                clearInterval(this.loop)
+                document.getElementById("Start").style.display = "flex"
+                document.getElementById("UserName").style.display = "flex"
+                document.getElementById("btnStart").style.display = "flex";
+                document.getElementById("leaderBoard").style.display = "flex";
+                document.getElementById("EasyDeck").style.display = "none";
+                document.getElementById("NormalDeck").style.display = "none";
+                document.getElementById("HardDeck").style.display = "none";
+                placar = {
+                    ...placar,
+                    sobrenome: ''
+                }
+                document.getElementById('First').textContent = placar[0];
+                document.getElementById('First').textContent = placar[1];
+                document.getElementById('First').textContent = placar[2];
+            }
+
+    }, 1000);
+
+}
+
+

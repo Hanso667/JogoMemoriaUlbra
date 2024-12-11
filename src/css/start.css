@@ -4,7 +4,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(rgb(31, 31, 31),black);
+    background-image: radial-gradient(#007997,#004D61);
 }
 .Screen{
     display: flex;
@@ -14,13 +14,14 @@ body{
     gap: 2vh;
     height: 50vh;
     width: 50vh;
-    background-image: radial-gradient(white,rgb(201, 201, 201));
-    box-shadow: 0 0 0 1vh rgb(201, 201, 201);
-    border: 1vh solid black;
+    background-color: #fccb6f;
+    box-shadow: 0 0 0 1vh #fff18c;
+    border: 1vh solid #fda664;
 }
-.NameInput{
-    width: 40vh;
+button:hover{
+    cursor: pointer;
 }
+
 .LeaderBoard{
     display: flex;
     flex-direction: column;
@@ -29,9 +30,12 @@ body{
     margin-left: 40vh;
     height: 50vh;
     width: 40vh;
-    background-image: radial-gradient(white,rgb(201, 201, 201));
-    box-shadow: 0 0 0 1vh rgb(201, 201, 201);
-    border: 1vh solid black;
+    background-color: #fccb6f;
+    box-shadow: 0 0 0 1vh #fff18c;
+    border: 1vh solid #fda664;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5vh;
+    
 }
 .LeaderBoard p{
     margin-top: 0.25vh;
@@ -43,9 +47,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 5vh;
     width: 35vh;
     border: 1px solid black;
+    border-radius: 1vh;
+    margin: 5px;
+    background-color: #e19f41;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vh;
+    color: black;
 }
 
 .Screen button{
@@ -53,6 +63,28 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10vh;
-    width: 40vh;
+    height: 5vh;
+    width: 20vh;
+    font-size: 3vh;
+    background-color: #e19f41;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5vh;
+    border: solid black;
+}
+#UserName{
+        width: 40vh;
+        height: 5vh;
+        font-size: 4vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 0.5vh;
+        border: solid black 0.1px;
+}
+#btnEasy{
+    color: green;
+}
+#btnNormal{
+    color: grey;
+}
+#btnHard{
+    color: red;
 }

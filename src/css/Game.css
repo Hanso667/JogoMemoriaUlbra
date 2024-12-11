@@ -1,42 +1,51 @@
-.EasyDeck,.NormalDeck,.HardDeck{
+.EasyDeck,.NormalDeck,.HardDeck {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90vh;
     width: 140vh;
-    background-image: radial-gradient(white,rgb(201, 201, 201));
-    box-shadow: 0 0 0 1vh rgb(201, 201, 201);
-    border: 1vh solid black;
+    background-color: #fccb6f;
+    box-shadow: 0 0 0 1vh #fff18c;
+    border: 1vh solid #fda664;
     gap: 5vh;
-    
+
 }
-.HardGrid{
+
+.EasyDeck ,.NormalDeck ,.HardDeck  {
+    font-size: 5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline 0.5vh;
+}
+
+.HardGrid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5,150px);
-    gap: 15px;
-    width: 100%;
-    max-width: 800px;
-}
-.NormalGrid{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3,150px);
-    gap: 15px;
-    width: 100%;
-    max-width: 800px;
-}
-.EasyGrid{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2,150px);
+    grid-template-columns: repeat(5, 150px);
     gap: 15px;
     width: 100%;
     max-width: 800px;
 }
 
-.Card{
+.NormalGrid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.EasyGrid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 150px);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.Card {
     aspect-ratio: 3/4;
     width: 100%;
     border: 1px solid black;
@@ -45,6 +54,7 @@
     transition: all 400ms ease;
     transform-style: preserve-3d;
 }
+
 .face {
     width: 100%;
     height: 100%;
@@ -52,22 +62,25 @@
     border: 1px solid black;
     border-radius: 5px;
 }
-.front{
+
+.front {
     background-size: cover;
     background-position: center;
     transform: (185deg);
 }
-.back{
+
+.back {
     background-image: url('/src/image/back.png');
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
-    
 }
-.reveal-card{
+
+.reveal-card {
     transform: rotateY(185deg);
 }
-.disabled-card{
+
+.disabled-card {
     transition: 1s;
     filter: saturate(0);
     opacity: 0.5;

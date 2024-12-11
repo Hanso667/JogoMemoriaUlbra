@@ -1,21 +1,21 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <link rel="stylesheet" href="src/css/reset.css"> 
-    <link rel="stylesheet" href="src/css/start.css"> 
-    <link rel="stylesheet" href="src/css/Game.css"> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Document</title> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/start.css">
+    <link rel="stylesheet" href="src/css/Game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head> 
 <body> 
 
     <main id="Start" style="display: flex;">
 
         <div class="Screen">
+            <img src="src/image/brain.png" width="150px">
             <input class="NameInput" id="UserName" type="text"></input>
-            <button id="btnSetUser" onclick="setName()" style="display: flex;">Set Name</button>
-            <button id="btnStart" onclick="start()" style="display: none;">Start</button>
+            <button id="btnStart" onclick="setName(), start()" style="display: flex;">Start</button>
 
         </div>
 
@@ -25,11 +25,11 @@
 
         <div class="Screen">
 
-            <button id="btnEasy" onclick="SetDiff('easy'), loadGameEasy()">Easy</button>
+            <button id="btnEasy" onclick="SetDiff('easy'), loadGameEasy(), startTime()">Easy</button>
 
-            <button id="btnNormal" onclick="SetDiff('normal'), loadGameNormal()">Normal</button>
+            <button id="btnNormal" onclick="SetDiff('normal'), loadGameNormal(), startTime()">Normal</button>
 
-            <button id="btnHard" onclick="SetDiff('hard'), loadGameHard()">Hard</button>
+            <button id="btnHard" onclick="SetDiff('hard'), loadGameHard(), startTime()">Hard</button>
 
         </div>
 
@@ -67,12 +67,10 @@
 
         <div class="EasyDeck" >
 
-            <p>00:00</p>
+            <span class="counter" id="counter">0</span>
 
                 <div class="EasyGrid">
                 </div>
-
-            <button onclick="goBack()">Go Back</button>
 
         </div>
 
@@ -82,12 +80,10 @@
 
         <div class="NormalDeck" >
 
-            <p>00:00</p>
+            <span class="counter" id="counter">0</span>
 
                 <div class="NormalGrid">
                 </div>
-
-            <button onclick="goBack()">Go Back</button>
 
         </div>
 
@@ -97,12 +93,10 @@
 
         <div class="HardDeck" >
 
-            <p>00:00</p>
+            <span class="counter" id="counter">0</span>
 
                 <div class="HardGrid">
                 </div>
-
-            <button onclick="goBack()">Go Back</button>
 
         </div>
 

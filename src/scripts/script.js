@@ -11,11 +11,10 @@ function setName(){
 
 
     document.getElementById("UserName").style.display = "none"
-    document.getElementById("btnSetUser").style.display = "none"
-    document.getElementById("btnStart").style.display = "flex";
+    document.getElementById("btnStart").style.display = "none";
 }
 function start() {
-
+    nome = document.getElementById('UserName').value
     document.getElementById("Start").style.display = "none";
     document.getElementById("Settings").style.display = "flex";
 
@@ -36,18 +35,4 @@ function SetDiff(diff) {
         document.getElementById("HardDeck").style.display = "flex";
     }
 
-}
-function goBack(){
-    const cards = document.querySelectorAll('.Card');
-    cards.forEach((card)=>{
-        card.remove();
-    })
-    document.getElementById("EasyDeck").style.display = "none";
-    document.getElementById("NormalDeck").style.display = "none";
-    document.getElementById("HardDeck").style.display = "none";
-    document.getElementById("Start").style.display = "flex";
-    document.getElementById("UserName").style.display = "flex"
-    document.getElementById("btnSetUser").style.display = "flex"
-    document.getElementById("leaderBoard").style.display = "flex"
-    document.getElementById("btnStart").style.display = "none";
 }
